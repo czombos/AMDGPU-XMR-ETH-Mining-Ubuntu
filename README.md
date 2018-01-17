@@ -35,6 +35,7 @@ wget https://www2.ati.com/drivers/linux/ubuntu/amdgpu-pro-17.50-511655.tar.xz --
 tar -Jxvf amdgpu-pro-17.50-511655.tar.xz
 cd amdgpu-pro-17.50-511655
 ./amdgpu-pro-install --opencl=legacy,rocm
+sudo apt install opencl-amdgpu-pro
 ```
 
 Add yourself to the video group
