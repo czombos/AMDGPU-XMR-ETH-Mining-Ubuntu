@@ -8,7 +8,6 @@ https://wiki.ubuntu.com/Kernel/LTSEnablementStack
 sudo apt-get update
 sudo apt-get install --install-recommends linux-generic-hwe-16.04
 sudo apt-get upgrade
-sudo reboot
 ```
 
 ### Disable screensaver, AMD tweaks, fall back to ethX network interface naming
@@ -26,6 +25,7 @@ GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"
 Update grub configuration
 ```sh
 sudo update-grub
+sudo reboot
 ```
 
 ### Install AMDGPU Driver + OpenCL + ROCm
