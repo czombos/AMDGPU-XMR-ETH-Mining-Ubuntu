@@ -38,6 +38,18 @@ GRUB_CMDLINE_LINUX_DEFAULT="text amdgpu.dc=1 amdgpu.powerplay=1"
 GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"
 ```
 
+Edit network configuration file:
+```sh
+sudo vi /etc/network/interfaces
+```
+
+Replace ```enpXsX``` to ```eth0```
+```sh
+# The primary network interface
+auto eth0
+iface eth0 inet dhcp
+```
+
 Update grub configuration
 ```sh
 sudo update-grub
