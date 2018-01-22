@@ -62,7 +62,7 @@ http://support.amd.com/en-us/kb-articles/Pages/Radeon-Software-for-Linux-Release
 wget https://www2.ati.com/drivers/linux/ubuntu/amdgpu-pro-17.50-511655.tar.xz --referer http://support.amd.com/en-us/kb-articles/Pages/Radeon-Software-for-Linux-Release-Notes.aspx
 tar -Jxvf amdgpu-pro-17.50-511655.tar.xz
 cd amdgpu-pro-17.50-511655
-./amdgpu-pro-install --opencl=legacy,rocm
+./amdgpu-pro-install --opencl=legacy,rocm --headless
 sudo apt install opencl-amdgpu-pro
 ```
 
