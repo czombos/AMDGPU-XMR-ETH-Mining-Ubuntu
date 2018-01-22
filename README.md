@@ -10,10 +10,26 @@ sudo apt-get install --install-recommends linux-generic-hwe-16.04
 sudo apt-get upgrade
 ```
 
+### Locale fix
+```sh
+sudo locale-gen en_US en_US.UTF-8 hu_HU hu_HU.UTF-8
+sudo dpkg-reconfigure locales
+```
+
+### mdadm.conf defines no arrays fix
+```sh
+sudo vi /etc/mdadm/mdadm.conf
+```
+
+Add this line below ```#definitions of existing MD arrays```
+```sh
+ARRAY <ignore> devices=/dev/sda
+```
+
 ### Disable screensaver, AMD tweaks, fall back to ethX network interface naming
 Edit the grub configuration file:
 ```sh
-vi /etc/default/grub
+sudo vi /etc/default/grub
 ```
 
 Replace ```GRUB_CMDLINE_LINUX_DEFAULT``` and ```GRUB_CMDLINE_LINUX``` lines
