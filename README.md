@@ -293,7 +293,7 @@ cmake .. -DCUDA_ENABLE=OFF -DOpenCL_INCLUDE_DIR=/usr/include/CL
 cmake --build .
 ```
 
-Create config files
+Create config files / start mining
 ```sh
 ./xmr-stak
 ```
@@ -314,4 +314,9 @@ cd ethminer
 mkdir build; cd build
 cmake ..
 cmake --build .
+```
+
+Start mining
+```sh
+./ethminer -G --cl-kernel 1 --cl-local-work 256 --cl-global-work 65536 --cl-parallel-hash 2 -RH -HWMON -SC 2 -SP 0 -S eu2.ethermine.org:4444 -FS eu1.ethermine.org:4444 -O 0xc3f2ac3149b3466A68DC81163A27E6ba11e79560.rig1
 ```
