@@ -309,6 +309,7 @@ Edit ```amd.txt``` and duplicate threads
 
 ### Ethminer (ETH mining)
 ```sh
+sudo apt install cmake build-essential
 https://github.com/ethereum-mining/ethminer.git
 cd ethminer
 mkdir build; cd build
