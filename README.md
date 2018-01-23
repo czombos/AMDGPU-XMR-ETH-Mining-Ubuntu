@@ -314,6 +314,7 @@ cd ethminer
 mkdir build; cd build
 cmake ..
 cmake --build .
+cd ethminer
 ```
 
 Start mining
