@@ -1,6 +1,8 @@
 # AMD RX 480/570/580 Mining on Ubuntu Server 16.04.3 LTS
 
-### Install Ubuntu HWE stack
+### Install Ubuntu Server with the HWE kernel
+
+### If you would install Ubuntu Server with the default kernel, install Ubuntu HWE stack
 https://help.ubuntu.com/community/AMDGPU-Driver
 https://wiki.ubuntu.com/Kernel/LTSEnablementStack
 
@@ -82,7 +84,7 @@ Edit your ```.profile```
 ```sh
 vi ~/.profile
 ```
-and amdgpu-pro PATH
+and add amdgpu-pro PATH to new line
 ```sh
 PATH="/opt/amdgpu-pro/bin:$PATH"
 ```
