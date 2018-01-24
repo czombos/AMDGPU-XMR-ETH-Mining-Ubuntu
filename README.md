@@ -2,7 +2,7 @@
 
 ### Install Ubuntu Server with the HWE kernel
 
-### If you would install Ubuntu Server with the default kernel, install Ubuntu HWE stack
+### If you use default Kernel during installation to install Ubuntu Server. You need install Ubuntu HWE stack package.
 https://help.ubuntu.com/community/AMDGPU-Driver
 https://wiki.ubuntu.com/Kernel/LTSEnablementStack
 
