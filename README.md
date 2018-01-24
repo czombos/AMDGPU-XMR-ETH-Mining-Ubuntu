@@ -1,8 +1,14 @@
 # AMD RX 480/570/580 Mining on Ubuntu Server 16.04.3 LTS
 
-### Install Ubuntu Server with the HWE kernel
+## Install Ubuntu Server with the HWE kernel
 
-### If you use default Kernel during installation to install Ubuntu Server. You need install Ubuntu HWE stack package.
+### Locale fix
+```sh
+sudo locale-gen en_US en_US.UTF-8 hu_HU hu_HU.UTF-8
+sudo dpkg-reconfigure locales
+```
+
+## If you use default Kernel during installation to install Ubuntu Server. You need install Ubuntu HWE stack package.
 https://help.ubuntu.com/community/AMDGPU-Driver
 https://wiki.ubuntu.com/Kernel/LTSEnablementStack
 
@@ -10,12 +16,6 @@ https://wiki.ubuntu.com/Kernel/LTSEnablementStack
 sudo apt-get update
 sudo apt-get install --install-recommends linux-generic-hwe-16.04
 sudo apt-get upgrade
-```
-
-### Locale fix
-```sh
-sudo locale-gen en_US en_US.UTF-8 hu_HU hu_HU.UTF-8
-sudo dpkg-reconfigure locales
 ```
 
 ### mdadm.conf defines no arrays fix
