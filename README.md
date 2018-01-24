@@ -13,9 +13,9 @@ https://help.ubuntu.com/community/AMDGPU-Driver
 https://wiki.ubuntu.com/Kernel/LTSEnablementStack
 
 ```sh
-sudo apt-get update
-sudo apt-get install --install-recommends linux-generic-hwe-16.04
-sudo apt-get upgrade
+sudo apt update
+sudo apt install --install-recommends linux-generic-hwe-16.04
+sudo apt upgrade
 ```
 
 ### mdadm.conf defines no arrays fix
