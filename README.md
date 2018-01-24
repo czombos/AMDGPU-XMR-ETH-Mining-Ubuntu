@@ -2,10 +2,16 @@
 
 ### Install Ubuntu Server with the HWE kernel
 
-#### Locale fix
+Locale fix
 ```sh
 sudo locale-gen en_US en_US.UTF-8 hu_HU hu_HU.UTF-8
 sudo dpkg-reconfigure locales
+```
+
+Upgrade
+```sh
+sudo apt update
+sudo apt upgrade
 ```
 
 ### If you use default Kernel during installation to install Ubuntu Server. You need install Ubuntu HWE stack package.
@@ -16,6 +22,11 @@ https://wiki.ubuntu.com/Kernel/LTSEnablementStack
 sudo apt update
 sudo apt install --install-recommends linux-generic-hwe-16.04
 sudo apt upgrade
+```
+
+### Install packages (optional)
+```sh
+sudo apt install mc vim htop lshw
 ```
 
 ### mdadm.conf defines no arrays fix
