@@ -324,6 +324,7 @@ mkdir xmr-stak/build
 cd xmr-stak/build
 cmake .. -DCUDA_ENABLE=OFF -DOpenCL_INCLUDE_DIR=/usr/include/CL
 cmake --build .
+cd bin
 ```
 
 Create config files / start mining
