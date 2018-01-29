@@ -294,6 +294,26 @@ sudo ./ohgodatool -i 0 --mem-state 2  --mem-clock 2150
 Memory state 2 clock: 1750 -> 2150.
 ```
 
+### Hard reboot
+https://askubuntu.com/questions/491146/terminal-commands-to-hard-shutdown-and-hard-restart?answertab=votes#tab-top
+It would be safer to do a <kbd>Alt</kbd>+<kbd>SysRq</kbd>+(<kbd>R</kbd>,<kbd>E</kbd>,<kbd>I</kbd>,<kbd>S</kbd>,<kbd>U</kbd>,<kbd>B or O</kbd>) than force a *hard* reboot.
+
+ - <kbd>R</kbd> Switch the keyboard from raw mode to XLATE mode
+ - <kbd>E</kbd> SIGTERM everything except init 
+ - <kbd>I</kbd> SIGKILL everything except init 
+ - <kbd>S</kbd> Syncs the mounted filesystems
+ - <kbd>U</kbd> Remounts the mounted filesystems in read-only mode
+ - <kbd>B</kbd> Reboot the system, or <kbd>O</kbd> Turn off the system
+
+You could just <kbd>Alt</kbd>+<kbd>SysRq</kbd>+<kbd>B/O</kbd> to reboot/halt if you really wanted to but you put your filesystems at risk by doing so. Doing all of the above is relatively safe and should work even when the rest of the system has broken down.
+
+This is essentially the same method you're talking about in your commands but I'm not sure you could script the E and I (as they'll nuke your terminal access). But you could definitely handle the disk access and reboot or shutdown.
+
+    for i in s u b; do echo $i | sudo tee /proc/sysrq-trigger; sleep 5; done  # reboot
+    for i in s u o; do echo $i | sudo tee /proc/sysrq-trigger; sleep 5; done  # halt
+
+You could still lose data from running applications but it shoudn't knacker your filesystem. If you have particularly huge disk write caches it might be best to increase the `sleep` value.
+
 ## Install miners
 ### xmr-stak (XMR/ETN mining)
 ```sh
