@@ -295,7 +295,7 @@ Memory state 2 clock: 1750 -> 2150.
 ```
 
 ### Hard reboot
-https://askubuntu.com/questions/491146/terminal-commands-to-hard-shutdown-and-hard-restart?answertab=votes#tab-top
+https://askubuntu.com/questions/491146/terminal-commands-to-hard-shutdown-and-hard-restart?answertab=votes#tab-top  
 It would be safer to do a <kbd>Alt</kbd>+<kbd>SysRq</kbd>+(<kbd>R</kbd>,<kbd>E</kbd>,<kbd>I</kbd>,<kbd>S</kbd>,<kbd>U</kbd>,<kbd>B or O</kbd>) than force a *hard* reboot.
 
  - <kbd>R</kbd> Switch the keyboard from raw mode to XLATE mode
