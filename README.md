@@ -353,7 +353,7 @@ cmake --build .
 cd ethminer
 ```
 
-Start mining
+Start mining ```start.sh```
 ```sh
 #!/bin/bash
 
