@@ -346,6 +346,7 @@ Edit ```amd.txt``` and duplicate threads
 sudo apt install cmake build-essential
 https://github.com/ethereum-mining/ethminer.git
 cd ethminer
+git submodule update --init --recursive
 mkdir build; cd build
 cmake ..
 cmake --build .
@@ -354,5 +355,15 @@ cd ethminer
 
 Start mining
 ```sh
-./ethminer -G --cl-kernel 1 --cl-local-work 256 --cl-global-work 65536 --cl-parallel-hash 2 -RH -HWMON -SC 2 -SP 0 -S eu2.ethermine.org:4444 -FS eu1.ethermine.org:4444 -O 0xc3f2ac3149b3466A68DC81163A27E6ba11e79560.rig1
+#!/bin/bash
+
+ETHWALLET=0xc3f2ac3149b3466A68DC81163A27E6ba11e79560.rig0
+
+export GPU_FORCE_64BIT_PTR=1
+export GPU_USE_SYNC_OBJECTS=1
+export GPU_MAX_ALLOC_PERCENT=100
+export GPU_SINGLE_ALLOC_PERCENT=100
+export GPU_MAX_HEAP_SIZE=100
+
+./ethminer -G --cl-kernel 1 --cl-local-work 256 --cl-global-work 65536 --cl-parallel-hash 2 -RH -P stratum+ssl://${ETHWALLET}@eu2.ethermine.org:5555 -P stratum+ssl://${ETHWALLET}@eu1.ethermine.org:5555
 ```
