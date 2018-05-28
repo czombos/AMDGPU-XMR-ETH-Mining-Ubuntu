@@ -72,9 +72,9 @@ sudo reboot
 ### Install AMDGPU Driver + OpenCL + ROCm
 http://support.amd.com/en-us/kb-articles/Pages/Radeon-Software-for-Linux-Release-Notes.aspx
 ```sh
-wget https://www2.ati.com/drivers/linux/ubuntu/amdgpu-pro-17.50-511655.tar.xz --referer http://support.amd.com/en-us/kb-articles/Pages/Radeon-Software-for-Linux-Release-Notes.aspx
-tar -Jxvf amdgpu-pro-17.50-511655.tar.xz
-cd amdgpu-pro-17.50-511655
+wget https://www2.ati.com/drivers/linux/ubuntu/amdgpu-pro-18.10-572953.tar.xz --referer http://support.amd.com/en-us/kb-articles/Pages/Radeon-Software-for-Linux-Release-Notes.aspx
+tar -Jxvf amdgpu-pro-18.10-572953.tar.xz
+cd amdgpu-pro-18.10-572953
 ./amdgpu-pro-install --opencl=legacy,rocm --headless
 sudo apt install opencl-amdgpu-pro
 ```
