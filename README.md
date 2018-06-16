@@ -76,7 +76,7 @@ wget https://www2.ati.com/drivers/linux/ubuntu/amdgpu-pro-18.10-572953.tar.xz --
 tar -Jxvf amdgpu-pro-18.10-572953.tar.xz
 cd amdgpu-pro-18.10-572953
 ./amdgpu-pro-install --opencl=legacy,rocm --headless
-sudo apt install opencl-amdgpu-pro
+sudo apt install amdgpu-dkms libdrm-amdgpu-amdgpu1 libdrm-amdgpu1 libdrm2-amdgpu opencl-amdgpu-pro
 ```
 
 Add yourself to the video group
