@@ -2,6 +2,12 @@
 
 ### Install Ubuntu Server with the HWE kernel
 
+Sudoers file, enable NOPASSWD for user, all commands
+```sh
+sudo visudo
+```
+Replace ```%sudo   ALL=(ALL:ALL) ALL``` line to ```%sudo   ALL=(ALL:ALL) NOPASSWD: ALL```
+
 Locale fix
 ```sh
 sudo locale-gen en_US en_US.UTF-8 hu_HU hu_HU.UTF-8
