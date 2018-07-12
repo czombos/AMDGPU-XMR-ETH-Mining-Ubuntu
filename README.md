@@ -373,3 +373,10 @@ export GPU_MAX_HEAP_SIZE=100
 
 ./ethminer -G --cl-kernel 1 --cl-local-work 256 --cl-global-work 65536 --cl-parallel-hash 2 -RH -P stratum+ssl://${ETHWALLET}@eu2.ethermine.org:5555 -P stratum+ssl://${ETHWALLET}@eu1.ethermine.org:5555
 ```
+
+Download ```mining.sh``` and replace ```user``` with your username
+```sh
+chmod +x mining.sh
+crontab -e
+@reboot /home/user/mining.sh
+```
