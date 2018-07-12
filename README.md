@@ -53,7 +53,7 @@ sudo vi /etc/default/grub
 
 Replace ```GRUB_CMDLINE_LINUX_DEFAULT``` and ```GRUB_CMDLINE_LINUX``` lines
 ```sh
-GRUB_CMDLINE_LINUX_DEFAULT="text amdgpu.dc=1 amdgpu.powerplay=1"
+GRUB_CMDLINE_LINUX_DEFAULT="amdgpu.dc=1"
 GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"
 ```
 
@@ -81,7 +81,7 @@ http://support.amd.com/en-us/kb-articles/Pages/Radeon-Software-for-Linux-Release
 wget https://www2.ati.com/drivers/linux/ubuntu/amdgpu-pro-18.10-572953.tar.xz --referer http://support.amd.com/en-us/kb-articles/Pages/Radeon-Software-for-Linux-Release-Notes.aspx
 tar -Jxvf amdgpu-pro-18.10-572953.tar.xz
 cd amdgpu-pro-18.10-572953
-./amdgpu-pro-install --opencl=legacy,rocm --headless
+./amdgpu-pro-install --opencl=legacy,pal --headless
 sudo apt install amdgpu-dkms libdrm-amdgpu-amdgpu1 libdrm-amdgpu1 libdrm2-amdgpu opencl-amdgpu-pro
 ```
 
