@@ -384,6 +384,7 @@ Open crontab file ```crontab -e``` and add this line
 @reboot /home/user/mining.sh
 ```
 
+Mining start after boot
 ```sh
 sudo reboot
 ```
