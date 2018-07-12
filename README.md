@@ -377,10 +377,18 @@ export GPU_MAX_HEAP_SIZE=100
 Download ```mining.sh``` and replace ```user``` with your username
 ```sh
 chmod +x mining.sh
-crontab -e
 ```
 
-Add this line
+Open crontab file ```crontab -e``` and add this line
 ```sh
 @reboot /home/user/mining.sh
+```
+
+```sh
+sudo reboot
+```
+
+Enter the tmux session
+```sh
+tmux a
 ```
