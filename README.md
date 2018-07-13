@@ -379,7 +379,7 @@ Download ```mining.sh``` and replace ```user``` with your username
 chmod +x mining.sh
 ```
 
-Open crontab file ```crontab -e``` and add this line
+Open crontab file ```crontab -e``` and add this line and change ```user``` to your username
 ```sh
 @reboot /home/user/mining.sh
 ```
