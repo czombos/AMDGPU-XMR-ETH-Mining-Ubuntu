@@ -135,9 +135,21 @@ One Click Timing Patch
 sudo ./atiflash -p 0 CARD-NAME.rom
 ```
 
+## Get GDDR5 memory information and other information from AMD Radeon GPUs.
+```sh
+sudo apt install opencl-headers libpci-dev
+git clone https://github.com/ystarnaud/amdmeminfo
+cd amdmeminfo
+make
+sudo ./amdmeminfo -o -s
+```
+
 ### Overclocking and undervolting support
 
 https://github.com/OhGodACompany/OhGodATool is a tool that allows both of this. It has been tested with Polaris on 4.13 kernels and does allow undervolting/overclocking via the power-play tables.
+```sh
+wget https://github.com/OhGodACompany/OhGodATool/releases/download/1/ohgodatool
+```
 
 #### Undervolting example
 
