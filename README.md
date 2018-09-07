@@ -53,7 +53,7 @@ sudo vi /etc/default/grub
 
 Replace ```GRUB_CMDLINE_LINUX_DEFAULT``` and ```GRUB_CMDLINE_LINUX``` lines
 ```sh
-GRUB_CMDLINE_LINUX_DEFAULT="amdgpu.dc=1"
+GRUB_CMDLINE_LINUX_DEFAULT="amdgpu.dc=1 amdgpu.vm_fragment_size=9 amdgpu.powerplay=1"
 GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"
 ```
 
