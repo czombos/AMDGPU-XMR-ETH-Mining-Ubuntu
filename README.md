@@ -81,7 +81,7 @@ http://support.amd.com/en-us/kb-articles/Pages/Radeon-Software-for-Linux-Release
 wget https://www2.ati.com/drivers/linux/ubuntu/amdgpu-pro-18.10-572953.tar.xz --referer http://support.amd.com/en-us/kb-articles/Pages/Radeon-Software-for-Linux-Release-Notes.aspx
 tar -Jxvf amdgpu-pro-18.10-572953.tar.xz
 cd amdgpu-pro-18.10-572953
-./amdgpu-pro-install --opencl=legacy,pal --headless
+./amdgpu-pro-install -y --opencl=pal,legacy --headless
 sudo apt install amdgpu-dkms libdrm-amdgpu-amdgpu1 libdrm-amdgpu1 libdrm2-amdgpu opencl-amdgpu-pro
 ```
 
