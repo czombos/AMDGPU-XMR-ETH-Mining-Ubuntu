@@ -90,7 +90,7 @@ If dpkg: error processing archive /var/opt/amdgpu-pro-local
 for amdgpupkg in $(dpkg --list | grep amdgpu-pro | awk '{print $2}'); do echo $amdgpupkg; sudo dpkg --purge --force-all $amdgpupkg; done
 for amdgpupkg in $(dpkg --list | grep amdgpu | awk '{print $2}'); do echo $amdgpupkg; sudo dpkg --purge --force-all $amdgpupkg; done
 sudo apt-get -f install
-./amdgpu-pro-install --opencl=legacy,pal --headless
+./amdgpu-pro-install -y --opencl=pal,legacy --headless
 ```
 
 Add yourself to the video group
