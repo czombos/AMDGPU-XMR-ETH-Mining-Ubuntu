@@ -114,6 +114,13 @@ and add amdgpu-pro PATH to new line
 PATH="/opt/amdgpu-pro/bin:$PATH"
 ```
 
+### Kernel binaries (amd64) of amd-staging with DAL and latest security patches
+https://github.com/M-Bab/linux-kernel-amdgpu-binaries
+```sh
+git clone --depth=1 https://github.com/M-Bab/linux-kernel-amdgpu-binaries
+cd linux-kernel-amdgpu-binaries
+sudo dpkg -i linux-headers*amdgpu.ubuntu_amd64.deb linux-image*amdgpu.ubuntu_amd64.deb firmware-radeon-ucode_*_all.deb
+
 ## Tuning
 
 ### Save Bios
