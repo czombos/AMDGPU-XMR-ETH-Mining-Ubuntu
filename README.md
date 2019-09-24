@@ -72,7 +72,7 @@ wget https://drivers.amd.com/drivers/linux/amdgpu-pro-19.30-855429-ubuntu-18.04.
 tar -Jxvf amdgpu-pro-19.30-855429-ubuntu-18.04.tar.xz
 cd amdgpu-pro-19.30-855429-ubuntu-18.04
 ./amdgpu-pro-install -y --opencl=pal,legacy --headless
-sudo apt install amdgpu-dkms libdrm-amdgpu-amdgpu1 libdrm-amdgpu1 libdrm2-amdgpu opencl-amdgpu-pro
+sudo apt install amdgpu-dkms libdrm-amdgpu-amdgpu1 libdrm2-amdgpu
 ```
 
 If dpkg: error processing archive /var/opt/amdgpu-pro-local
