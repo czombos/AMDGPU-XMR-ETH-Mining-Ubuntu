@@ -61,7 +61,7 @@ iface eth0 inet dhcp
 
 Update grub configuration
 ```sh
-sudo update-grub
+sudo update-grub && sudo update-grub2 && sudo update-grub-legacy-ec2
 sudo reboot
 ```
 
