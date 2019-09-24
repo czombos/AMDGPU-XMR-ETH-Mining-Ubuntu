@@ -43,7 +43,7 @@ sudo vi /etc/default/grub
 
 Replace ```GRUB_CMDLINE_LINUX_DEFAULT``` and ```GRUB_CMDLINE_LINUX``` lines
 ```sh
-GRUB_CMDLINE_LINUX_DEFAULT="text amdgpu.dc=0"
+GRUB_CMDLINE_LINUX_DEFAULT="text amdgpu.dc=0 amdgpu.ppfeaturemask=0xffffffff"
 GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"
 ```
 
