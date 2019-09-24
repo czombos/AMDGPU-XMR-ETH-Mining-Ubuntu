@@ -1,4 +1,7 @@
 #!/bin/sh
+
+cd /home/cz/ && ./setfan.sh
+
 # create a new session. Note the -d flag, we do not want to attach just yet!
 tmux new-session -s mining -n 'miner' -d
 
