@@ -66,7 +66,7 @@ sudo reboot
 ```
 
 ### Install AMDGPU Driver + OpenCL + ROCm
-http://support.amd.com/en-us/kb-articles/Pages/Radeon-Software-for-Linux-Release-Notes.aspx
+https://www.amd.com/en/support/kb/release-notes/rn-amdgpu-unified-linux
 ```sh
 wget https://drivers.amd.com/drivers/linux/amdgpu-pro-19.30-855429-ubuntu-18.04.tar.xz --referer http://support.amd.com/en-us/kb-articles/Pages/Radeon-Software-for-Linux-Release-Notes.aspx
 tar -Jxvf amdgpu-pro-19.30-855429-ubuntu-18.04.tar.xz
