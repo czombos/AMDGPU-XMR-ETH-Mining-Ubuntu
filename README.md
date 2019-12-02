@@ -16,8 +16,7 @@ sudo dpkg-reconfigure locales
 
 Upgrade
 ```sh
-sudo apt update
-sudo apt upgrade
+sudo apt update && sudo apt upgrade
 ```
 
 ### If you use default Kernel during installation to install Ubuntu Server. You need install Ubuntu HWE stack package.
