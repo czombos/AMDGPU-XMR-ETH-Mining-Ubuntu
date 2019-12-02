@@ -45,6 +45,12 @@ Replace ```GRUB_CMDLINE_LINUX_DEFAULT``` and ```GRUB_CMDLINE_LINUX``` lines
 GRUB_CMDLINE_LINUX_DEFAULT="text amdgpu.dc=0 amdgpu.ppfeaturemask=0xffffffff"
 GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"
 ```
+```amdgpu.ppfeaturemask=0xffffffff``` kernel boot option allows control of GPU power states (GPU / VRAM clocks and voltages)
+
+Update grub configuration
+```sh
+sudo update-grub && sudo update-grub2 && sudo update-grub-legacy-ec2
+```
 
 Edit network configuration file:
 ```sh
@@ -58,9 +64,7 @@ auto eth0
 iface eth0 inet dhcp
 ```
 
-Update grub configuration
 ```sh
-sudo update-grub && sudo update-grub2 && sudo update-grub-legacy-ec2
 sudo reboot
 ```
 
