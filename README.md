@@ -49,7 +49,7 @@ GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"
 
 Update grub configuration
 ```sh
-sudo update-grub && sudo update-grub2 && sudo update-grub-legacy-ec2
+sudo update-grub && sudo update-grub2 && sudo update-grub-legacy-ec2 && sudo update-initramfs -u -k all
 ```
 
 Edit network configuration file:
