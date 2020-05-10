@@ -125,7 +125,7 @@ One Click Timing Patch
 
 ### Flash Bios Mod
 ```sh
-sudo ./atiflash -p 0 CARD-NAME.rom
+sudo ./amdvbflash -p 0 CARD-NAME.rom
 ```
 
 ## Get GDDR5 memory information and other information from AMD Radeon GPUs.
